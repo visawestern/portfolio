@@ -1,0 +1,84 @@
+/* site_style.css — визуальный язык портфолио Greener.
+   Тот же стиль, что у слайдов: графит + изумруд + сетка + моно-подписи. */
+
+:root {
+  --bg0: #0B0F14;
+  --bg1: #111A22;
+  --bg2: #0E1620;
+  --line: rgba(62, 213, 152, 0.22);
+  --green: #3ED598;
+  --green2: #19B37A;
+  --green-dim: #1E7A5A;
+  --ink: #E8F2EC;
+  --ink-dim: #9DB8AB;
+  --mono: "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+  --sans: "Helvetica Neue", Arial, sans-serif;
+  --wrap: 1120px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background:
+    radial-gradient(120% 90% at 50% 0%, var(--bg1) 0%, var(--bg0) 62%),
+    var(--bg0);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 28px; }
+
+a { color: var(--green); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* --- hero --- */
+.hero { padding: 96px 0 64px; border-bottom: 1px solid var(--line);
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 60px 60px; }
+.hero h1 { font-size: clamp(48px, 7vw, 88px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.02; margin: 18px 0 22px; }
+.lede { font-size: clamp(18px, 2.2vw, 26px); color: var(--ink-dim); max-width: 760px; }
+
+.kicker { font-family: var(--mono); font-size: 15px; letter-spacing: .3em;
+  color: var(--green); text-transform: uppercase; }
+
+.links { margin-top: 30px; display: flex; gap: 26px; font-family: var(--mono);
+  font-size: 17px; }
+
+/* --- полоса цифр --- */
+.strip { border-bottom: 1px solid var(--line); background: var(--bg1); }
+.strip .wrap { display: flex; flex-wrap: wrap; gap: 18px 56px; padding: 30px 28px; }
+.strip div { display: flex; align-items: baseline; gap: 14px; }
+.strip b { font-family: var(--mono); font-size: 34px; color: var(--green); font-weight: 700; }
+.strip span { color: var(--ink-dim); font-size: 15px; }
+
+/* --- кейсы --- */
+#cases { padding: 80px 0 40px; }
+#cases h2, #about h2 { font-size: 40px; font-weight: 750; letter-spacing: -0.015em; margin-bottom: 40px; }
+
+.grid { display: grid; grid-template-columns: 1fr; gap: 28px; }
+@media (min-width: 900px) { .grid { grid-template-columns: 1fr 1fr; } }
+
+.case { background: var(--bg1); border: 1px solid var(--line); border-radius: 22px;
+  padding: 34px 34px 28px; display: flex; flex-direction: column; gap: 18px; }
+.case h3 { font-size: 32px; font-weight: 750; letter-spacing: -0.01em; margin: 10px 0 6px; }
+.case .sub { color: var(--ink-dim); font-size: 17px; }
+.facts { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+.facts li { display: flex; align-items: baseline; gap: 14px; }
+.facts b { font-family: var(--mono); color: var(--green); font-size: 20px; min-width: 92px; }
+.facts span { color: var(--ink-dim); font-size: 15px; }
+.case .links { margin-top: 6px; font-family: var(--mono); font-size: 15px; }
+.muted { color: var(--ink-dim); }
+
+.case figure { margin-top: 6px; border: 1px solid var(--line); border-radius: 16px;
+  overflow: hidden; background: var(--bg2); }
+.case figure img { width: 100%; display: block; }
+
+/* --- about + footer --- */
+#about { padding: 60px 0 90px; max-width: 760px; }
+#about p { color: var(--ink-dim); font-size: 18px; margin-bottom: 18px; }
+footer { border-top: 1px solid var(--line); padding: 26px 0 40px; color: var(--ink-dim);
+  font-family: var(--mono); font-size: 14px; }
