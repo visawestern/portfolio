@@ -1,4 +1,4 @@
-/* site_style.css — визуальный язык портфолио Greener.
+/* site_style.css — визуальный язык портфолио Greener (v2).
    Тот же стиль, что у слайдов: графит + изумруд + сетка + моно-подписи. */
 
 :root {
@@ -7,7 +7,6 @@
   --bg2: #0E1620;
   --line: rgba(62, 213, 152, 0.22);
   --green: #3ED598;
-  --green2: #19B37A;
   --green-dim: #1E7A5A;
   --ink: #E8F2EC;
   --ink-dim: #9DB8AB;
@@ -29,7 +28,6 @@ body {
 }
 
 .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 28px; }
-
 a { color: var(--green); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
@@ -39,46 +37,72 @@ a:hover { text-decoration: underline; }
     linear-gradient(var(--line) 1px, transparent 1px),
     linear-gradient(90deg, var(--line) 1px, transparent 1px);
   background-size: 60px 60px; }
-.hero h1 { font-size: clamp(48px, 7vw, 88px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.02; margin: 18px 0 22px; }
-.lede { font-size: clamp(18px, 2.2vw, 26px); color: var(--ink-dim); max-width: 760px; }
+.hero h1 { font-size: clamp(40px, 6vw, 76px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.04; margin: 18px 0 22px; }
+.lede { font-size: clamp(17px, 2vw, 22px); color: var(--ink-dim); max-width: 720px; }
 
 .kicker { font-family: var(--mono); font-size: 15px; letter-spacing: .3em;
   color: var(--green); text-transform: uppercase; }
 
-.links { margin-top: 30px; display: flex; gap: 26px; font-family: var(--mono);
-  font-size: 17px; }
+.links { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 26px; font-family: var(--mono); font-size: 17px; }
 
-/* --- полоса цифр --- */
+/* --- полоса фактов --- */
 .strip { border-bottom: 1px solid var(--line); background: var(--bg1); }
 .strip .wrap { display: flex; flex-wrap: wrap; gap: 18px 56px; padding: 30px 28px; }
 .strip div { display: flex; align-items: baseline; gap: 14px; }
-.strip b { font-family: var(--mono); font-size: 34px; color: var(--green); font-weight: 700; }
+.strip b { font-family: var(--mono); font-size: 32px; color: var(--green); font-weight: 700; }
 .strip span { color: var(--ink-dim); font-size: 15px; }
 
-/* --- кейсы --- */
-#cases { padding: 80px 0 40px; }
-#cases h2, #about h2 { font-size: 40px; font-weight: 750; letter-spacing: -0.015em; margin-bottom: 40px; }
+/* --- секции --- */
+section { padding: 80px 0 32px; }
+h2 { font-size: 38px; font-weight: 750; letter-spacing: -0.015em; margin-bottom: 12px; }
+.catalog-note { color: var(--ink-dim); margin-bottom: 28px; max-width: 640px; }
 
-.grid { display: grid; grid-template-columns: 1fr; gap: 28px; }
-@media (min-width: 900px) { .grid { grid-template-columns: 1fr 1fr; } }
-
-.case { background: var(--bg1); border: 1px solid var(--line); border-radius: 22px;
-  padding: 34px 34px 28px; display: flex; flex-direction: column; gap: 18px; }
-.case h3 { font-size: 32px; font-weight: 750; letter-spacing: -0.01em; margin: 10px 0 6px; }
-.case .sub { color: var(--ink-dim); font-size: 17px; }
-.facts { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+/* --- избранные кейсы --- */
+.featured-grid { display: grid; gap: 28px; margin-top: 30px; }
+.featured { position: relative; background: var(--bg1); border: 1px solid var(--line); border-radius: 22px; padding: 38px 36px 30px; }
+.featured .num { position: absolute; top: 26px; right: 30px; font-family: var(--mono);
+  font-size: 15px; color: var(--green-dim); letter-spacing: .2em; }
+.featured h3 { font-size: 34px; font-weight: 750; letter-spacing: -0.01em; margin-bottom: 18px; }
+.flow { display: grid; grid-template-columns: 110px 1fr; gap: 8px 22px; margin-bottom: 18px; }
+.flow dt { font-family: var(--mono); font-size: 13px; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--green); padding-top: 4px; }
+.flow dd { color: var(--ink-dim); font-size: 17px; }
+.facts { list-style: none; display: flex; flex-direction: column; gap: 8px; margin: 16px 0; }
 .facts li { display: flex; align-items: baseline; gap: 14px; }
-.facts b { font-family: var(--mono); color: var(--green); font-size: 20px; min-width: 92px; }
+.facts b { font-family: var(--mono); color: var(--green); font-size: 19px; min-width: 92px; }
 .facts span { color: var(--ink-dim); font-size: 15px; }
-.case .links { margin-top: 6px; font-family: var(--mono); font-size: 15px; }
-.muted { color: var(--ink-dim); }
 
-.case figure { margin-top: 6px; border: 1px solid var(--line); border-radius: 16px;
-  overflow: hidden; background: var(--bg2); }
-.case figure img { width: 100%; display: block; }
+figure { margin-top: 14px; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: var(--bg2); }
+figure img { width: 100%; display: block; }
+figure.zoomable { cursor: zoom-in; }
+
+/* --- каталог --- */
+.filters { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 26px; }
+.filters button { font-family: var(--mono); font-size: 14px; letter-spacing: .06em;
+  color: var(--ink-dim); background: var(--bg1); border: 1px solid var(--line);
+  border-radius: 999px; padding: 9px 20px; cursor: pointer; }
+.filters button.active, .filters button:hover { color: var(--green); }
+
+.compact-grid { list-style: none; display: grid; gap: 18px; grid-template-columns: 1fr; }
+@media (min-width: 760px) { .compact-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1040px) { .compact-grid { grid-template-columns: 1fr 1fr 1fr; } }
+.compact { background: var(--bg1); border: 1px solid var(--line); border-radius: 16px; padding: 22px 24px; }
+.compact-head { display: flex; gap: 16px; align-items: flex-start; }
+.compact-head h4 { font-size: 21px; font-weight: 700; }
+.compact-head .cat { display: block; font-family: var(--mono); font-size: 12px;
+  color: var(--green-dim); letter-spacing: .12em; text-transform: uppercase; margin-top: 4px; }
+.compact .num { font-family: var(--mono); font-size: 14px; color: var(--green-dim); padding-top: 2px; }
+.compact-sub { color: var(--ink-dim); font-size: 15px; margin: 10px 0; }
+.compact-fact { font-size: 15px; }
+.compact-fact b { font-family: var(--mono); color: var(--green); }
 
 /* --- about + footer --- */
-#about { padding: 60px 0 90px; max-width: 760px; }
-#about p { color: var(--ink-dim); font-size: 18px; margin-bottom: 18px; }
+#about p { color: var(--ink-dim); font-size: 17px; margin-bottom: 16px; max-width: 720px; }
 footer { border-top: 1px solid var(--line); padding: 26px 0 40px; color: var(--ink-dim);
   font-family: var(--mono); font-size: 14px; }
+
+/* --- лайтбокс --- */
+.lightbox { position: fixed; inset: 0; background: rgba(4, 8, 6, .92); display: none;
+  align-items: center; justify-content: center; padding: 24px; z-index: 50; cursor: zoom-out; }
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 96vw; max-height: 92vh; border: 1px solid var(--line); border-radius: 12px; }

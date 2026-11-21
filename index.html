@@ -3,243 +3,251 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Greener — engineer & builder</title>
+<title>Greener — independent software engineer</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="hero">
   <div class="wrap">
     <p class="kicker">G R E E N E R</p>
-    <h1>Ships hard things.</h1>
-    <p class="lede">Patched Chromium · macOS AI workspace · live marketplaces ·
-    VPN infra · payment systems · LLM engines. Code and numbers, no filler.</p>
+    <h1>I build software that works<br>beyond the&nbsp;demo.</h1>
+    <p class="lede">Independent software engineer — AI systems & product
+    engineering. Patched Chromium, native macOS apps, live marketplaces, VPN
+    infrastructure, LLM inference engines. Code and numbers, no filler.</p>
     <p class="links">
       <a href="https://github.com/visawestern">GitHub ↗</a>
-      <a href="https://instagram.com">Instagram ↗</a>
+      <a href="mailto:visawestern.com@gmail.com">Contact ↗</a>
     </p>
   </div>
 </header>
 <section class="strip"><div class="wrap">
-  <div><b>20</b><span>documented cases</span></div>
-  <div><b>1,357</b><span>Swift source files (one app)</span></div>
-  <div><b>589</b><span>test methods (one iOS app)</span></div>
   <div><b>4</b><span>live products</span></div>
+  <div><b>1,357</b><span>Swift files (one app)</span></div>
+  <div><b>589</b><span>test methods (one iOS app)</span></div>
+  <div><b>47</b><span>C++ patches on Chromium</span></div>
 </div></section>
 <main class="wrap">
-  <section id="cases">
-    <h2>Case studies</h2>
-    <div class="grid">
-<article class="case" id="antibrowser">
-  <div class="case-head">
-    <span class="kicker">CASE 01 · C++ / CHROMIUM</span>
-    <h3>AntiBrowser</h3>
-    <p class="sub">A hardened Chromium fork — SSH tunnels, IPFS, local AI, CDP control.</p>
-    <ul class="facts"><li><b>47</b><span>own C++ patches on the Chromium tree</span></li><li><b>0</b><span>external scripts at runtime — features are native</span></li><li><b>4</b><span>subsystems: privacy shields · SSH tunnel · IPFS · AI agent</span></li></ul>
-    <p class="links"><a href="https://github.com/visawestern/AntiBrowser">source ↗</a></p>
-  </div>
-  <figure><img src="assets/shots/antibrowser/antibrowser-logo-wide.png" alt="AntiBrowser — evidence" loading="lazy"></figure>
+  <section id="featured">
+    <h2>Selected work</h2>
+    <div class="featured-grid">
+<article class="featured" id="antibrowser">
+  <span class="num">01</span>
+  <h3>AntiBrowser</h3>
+  <dl class="flow">
+    <dt>Problem</dt><dd>Chrome can&#x27;t tunnel per-site over your own SSH box, pin to IPFS, or run local AI — without extensions that spy on you.</dd>
+    <dt>Approach</dt><dd>Patched Chromium itself: 47 C++ patches, a native SSH-2.0 tunnel client, an embedded Kubo IPFS node, and an AI agent driven through the accessibility tree.</dd>
+    <dt>Result</dt><dd>Builds and runs on the Mac; the engine answers on its own REST transport (verified).</dd>
+  </dl>
+  <ul class="facts"><li><b>47</b><span>own C++ patches on the Chromium tree</span></li><li><b>0</b><span>external scripts at runtime — features are native</span></li><li><b>4</b><span>subsystems: privacy shields · SSH tunnel · IPFS · AI agent</span></li></ul>
+  <p class="links"><a href="https://github.com/visawestern/AntiBrowser">source ↗</a></p>
+  <figure class="zoomable"><img src="assets/shots/antibrowser/antibrowser-logo-wide.png" alt="AntiBrowser — evidence" loading="lazy"></figure>
 </article>
-<article class="case" id="mycoder">
-  <div class="case-head">
-    <span class="kicker">CASE 01B · SWIFT / macOS</span>
-    <h3>myCoder</h3>
-    <p class="sub">Native macOS AI coding workspace — SwiftUI + its own REST-controlled browser.</p>
-    <ul class="facts"><li><b>1,357</b><span>Swift source files · ~700 test files</span></li><li><b>v2.119.19</b><span>release build, signed, shipping</span></li><li><b>2</b><span>transports: own REST API 8766 + AntiBrowser REST bridge</span></li></ul>
-    <p class="links"><a href="https://github.com/visawestern/MiCoder">source ↗</a></p>
-  </div>
-  <figure><img src="assets/shots/mycoder/main-chat.png" alt="myCoder — evidence" loading="lazy"></figure>
+<article class="featured" id="mycoder">
+  <span class="num">02</span>
+  <h3>myCoder</h3>
+  <dl class="flow">
+    <dt>Problem</dt><dd>AI coding tools demand the cloud; nothing native runs your code locally with an agent that can see the browser.</dd>
+    <dt>Approach</dt><dd>Swift/SwiftUI macOS workspace — 1,357 source files, ~700 test files — with its own REST API (8766) driving a custom Chromium engine over REST. No WebKit.</dd>
+    <dt>Result</dt><dd>Signed release build v2.119.19, shipping; endpoints verified live.</dd>
+  </dl>
+  <ul class="facts"><li><b>1,357</b><span>Swift source files · ~700 test files</span></li><li><b>v2.119.19</b><span>release build, signed, shipping</span></li><li><b>2</b><span>transports: own REST API 8766 + AntiBrowser REST bridge</span></li></ul>
+  <p class="links"><a href="https://github.com/visawestern/MiCoder">source ↗</a></p>
+  <figure class="zoomable"><img src="assets/shots/mycoder/main-chat.png" alt="myCoder — evidence" loading="lazy"></figure>
 </article>
-<article class="case" id="titto">
-  <div class="case-head">
-    <span class="kicker">CASE 01 · PRODUCT</span>
-    <h3>Titto.shop</h3>
-    <p class="sub">AI-first global marketplace. Live in production — the whole world trades here.</p>
-    <ul class="facts"><li><b>463+</b><span>test files: 306 PHP + 157 frontend, CI on GitHub Actions</span></li><li><b>6</b><span>languages incl. Arabic RTL, i18n across the stack</span></li><li><b>4</b><span>subsystems: AI listings · chat + WebRTC calls · rewarded ads · moderation</span></li></ul>
-    <p class="links"><a href="https://titto.shop">live ↗</a></p>
-  </div>
-  <figure><img src="assets/shots/live/titto-hero.png" alt="Titto.shop — evidence" loading="lazy"></figure>
+<article class="featured" id="titto">
+  <span class="num">03</span>
+  <h3>Titto.shop</h3>
+  <dl class="flow">
+    <dt>Problem</dt><dd>A global marketplace needs more than CRUD: listings, chat, calls, moderation — and six languages including RTL.</dd>
+    <dt>Approach</dt><dd>Laravel 12 modular monolith + Vue 3.5 + PostGIS; Horizon queues, Meilisearch, Reverb/WebRTC; 463+ test files with CI.</dd>
+    <dt>Result</dt><dd>Live at titto.shop — real listings, real users, six languages.</dd>
+  </dl>
+  <ul class="facts"><li><b>463+</b><span>test files: 306 PHP + 157 frontend, CI on GitHub Actions</span></li><li><b>6</b><span>languages incl. Arabic RTL, i18n across the stack</span></li><li><b>4</b><span>subsystems: AI listings · chat + WebRTC calls · rewarded ads · moderation</span></li></ul>
+  <p class="links"><a href="https://titto.shop">live ↗</a></p>
+  <figure class="zoomable"><img src="assets/shots/live/titto-hero.png" alt="Titto.shop — evidence" loading="lazy"></figure>
 </article>
-<article class="case" id="ssh2vpn">
-  <div class="case-head">
-    <span class="kicker">CASE 02 · INFRA / MOBILE</span>
-    <h3>SSH2VPN</h3>
-    <p class="sub">Your own SSH server, as a system-wide VPN. No server changes at all.</p>
-    <ul class="facts"><li><b>589</b><span>test methods in 66 Swift files + 28 Python gateway tests</span></li><li><b>3</b><span>platforms: iOS · Android · macOS on one shared core</span></li><li><b>17</b><span>locales · StoreKit paywall · live on the App Store</span></li></ul>
-    <p class="links"><a href="https://github.com/visawestern/ssh2vpn">source ↗</a></p>
-  </div>
-  <figure><img src="assets/shots/ssh2vpn/01-connect.png" alt="SSH2VPN — evidence" loading="lazy"></figure>
-</article>
-<article class="case" id="kuztds">
-  <div class="case-head">
-    <span class="kicker">CASE 03 · BACKEND</span>
-    <h3>kuzTDS</h3>
-    <p class="sub">High-throughput click &amp; redirect tracking in Go. One binary, ClickHouse + Redis.</p>
-    <ul class="facts"><li><b>26</b><span>commits ahead of upstream — the money domain it never had</span></li><li><b>494</b><span>test functions across 97 files · CI runs with -race</span></li><li><b>28.6k</b><span>LOC of Go, single deployable binary</span></li></ul>
-    <p class="links"><a href="https://github.com/visawestern/kuztds">source ↗</a></p>
-  </div>
-  <figure><img src="assets/shots/kuztds/dashboard.png" alt="kuzTDS — evidence" loading="lazy"></figure>
-</article>
-<article class="case" id="llmeng">
-  <div class="case-head">
-    <span class="kicker">CASE 15 · LLM SYSTEMS</span>
-    <h3>The layer under the AI</h3>
-    <p class="sub">Inference engines, weight containers, MoE runs — built from the metal up.</p>
-    <ul class="facts"><li><b>1,536</b><span>logical MoE experts from a dense 27B FFN (Rust + Metal)</span></li><li><b>0</b><span>loss — m2c container verifies greedy-token identity</span></li><li><b>4</b><span>engines: denseToMOE · m2c · model_repack · freeToken</span></li></ul>
-    <p class="links"><span class="muted">repo private — code on request</span></p>
-  </div>
-  <figure><img src="assets/shots/m2c/m2c_status_report.png" alt="The layer under the AI — evidence" loading="lazy"></figure>
-</article>
-<article class="case" id="razum">
-  <div class="case-head">
-    <span class="kicker">CASE 12 · AI ENGINE</span>
-    <h3>RaZuM</h3>
-    <p class="sub">A semantic &quot;brain&quot; in Go — not an LLM, a graph-matrix engine.</p>
-    <ul class="facts"><li><b>686</b><span>Go test files across 731 commits</span></li><li><b>9</b><span>layers in the unified memory representation</span></li><li><b>1</b><span>API surface: OpenAI/Ollama-compatible on :13373</span></li></ul>
-    <p class="links"><span class="muted">repo private — code on request</span></p>
-  </div>
-  
-</article>
-<article class="case" id="nailshop">
-  <div class="case-head">
-    <span class="kicker">CASE 05 · PRODUCT</span>
-    <h3>Booking, built for a real business</h3>
-    <p class="sub">Lash &amp; nail studio in Pattaya — Next.js 16 + Supabase, th/ru/en.</p>
-    <ul class="facts"><li><b>3</b><span>languages: th · ru · en with next-intl</span></li><li><b>7</b><span>Vercel cron jobs running the business day</span></li><li><b>2</b><span>apps in one: client booking + admin console</span></li></ul>
-    <p class="links"><a href="https://charming-lashes-booking.vercel.app">live ↗</a></p>
-  </div>
-  <figure><img src="assets/shots/nailshop/04-booking-status-confirmed.png" alt="Booking, built for a real business — evidence" loading="lazy"></figure>
-</article>
-<article class="case" id="tittoplatform">
-  <div class="case-head">
-    <span class="kicker">CASE 11 · PLATFORM</span>
-    <h3>Titto-platform</h3>
-    <p class="sub">The successor of two codebases — with a real deploy pipeline.</p>
-    <ul class="facts"><li><b>5</b><span>CI gates: install · build · test · audit · deploy</span></li><li><b>8.4</b><span>PHP strict types with phpstan in the loop</span></li><li><b>DDD</b><span>modular monolith, unified error contract</span></li></ul>
-    <p class="links"><span class="muted">repo private — code on request</span></p>
-  </div>
-  
-</article>
-<article class="case" id="minray">
-  <div class="case-head">
-    <span class="kicker">CASE 06 · E-COMMERCE</span>
-    <h3>minray.store</h3>
-    <p class="sub">Live store + a module-by-module migration to Laravel, with parity tests.</p>
-    <ul class="facts"><li><b>40+</b><span>PHPUnit tests guarding port parity</span></li><li><b>3</b><span>viewports verified: 1440 · 768 · 375</span></li><li><b>13</b><span>target: Laravel 13 + PostgreSQL 18 stack</span></li></ul>
-    <p class="links"><a href="https://minray.store">live ↗</a></p>
-  </div>
-  <figure><img src="assets/shots/live/minray-home.png" alt="minray.store — evidence" loading="lazy"></figure>
-</article>
-<article class="case" id="dibaas">
-  <div class="case-head">
-    <span class="kicker">CASE 04 · PLATFORM</span>
-    <h3>dibaas.cloud</h3>
-    <p class="sub">Blockchain-as-a-service SaaS: IPFS pinning, EVM RPC, crypto billing.</p>
-    <ul class="facts"><li><b>18</b><span>API controllers · 13,525 lines · 51 migrations</span></li><li><b>4</b><span>billing · IPFS · RPC gateway · subdomain routing</span></li><li><b>1</b><span>Laravel install serving &lt;project&gt;.dibaas.cloud subdomains</span></li></ul>
-    <p class="links"><a href="https://dibaas.cloud">live ↗</a></p>
-  </div>
-  <figure><img src="assets/shots/dibaas/application.png" alt="dibaas.cloud — evidence" loading="lazy"></figure>
-</article>
-<article class="case" id="pocsec">
-  <div class="case-head">
-    <span class="kicker">CASE 07 · SECURITY</span>
-    <h3>Proof, not vibes</h3>
-    <p class="sub">Defensive verification PoCs: every finding runnable, timestamped, reproducible.</p>
-    <ul class="facts"><li><b>4</b><span>PoCs: smuggling · RCE chain · privilege boundary · XSS</span></li><li><b>100%</b><span>runnable — pytest suite + HTML evidence per check</span></li><li><b>0</b><span>claims without a reproduction</span></li></ul>
-    <p class="links"><span class="muted">repo private — code on request</span></p>
-  </div>
-  <figure><img src="assets/shots/pocsec/poc4_wwwdata_root_boundary.png" alt="Proof, not vibes — evidence" loading="lazy"></figure>
-</article>
-<article class="case" id="bezdna">
-  <div class="case-head">
-    <span class="kicker">CASE 13 · GAMES</span>
-    <h3>Bezdna</h3>
-    <p class="sub">Open-world action MMORPG: Unity 6000 URP client + Laravel API.</p>
-    <ul class="facts"><li><b>3</b><span>stacks: Unity C# · Laravel API · Python bridge</span></li><li><b>20</b><span>task decks (R00–R20) planned in-repo</span></li><li><b>3×</b><span>test suites: Unity EditMode/PlayMode · Laravel · pytest</span></li></ul>
-    <p class="links"><span class="muted">repo private — code on request</span></p>
-  </div>
-  <figure><img src="assets/shots/bezdna/bez_session_01.jpg" alt="Bezdna — evidence" loading="lazy"></figure>
-</article>
-<article class="case" id="horizondrift">
-  <div class="case-head">
-    <span class="kicker">CASE 14 · GAMES</span>
-    <h3>Horizon Drift</h3>
-    <p class="sub">Procedural survival across a 720-star galaxy — Godot 4.7 + Jolt.</p>
-    <ul class="facts"><li><b>218</b><span>headless GDScript test files</span></li><li><b>4</b><span>phase changes: space → atmosphere → land → take off</span></li><li><b>0</b><span>overclaims — README admits what&#x27;s unverified</span></li></ul>
-    <p class="links"><span class="muted">repo private — code on request</span></p>
-  </div>
-  <figure><img src="assets/shots/horizondrift/hd_space_sheet.png" alt="Horizon Drift — evidence" loading="lazy"></figure>
-</article>
-<article class="case" id="animecanvas">
-  <div class="case-head">
-    <span class="kicker">CASE 08 · AI / FRONTEND</span>
-    <h3>AnimeCanvas PWA</h3>
-    <p class="sub">Photo → cel animation, generated client-side in the browser.</p>
-    <ul class="facts"><li><b>51</b><span>test files with a TDD evidence report in the repo</span></li><li><b>~90%</b><span>reported line coverage + live smoke test</span></li><li><b>0</b><span>servers — entire pipeline runs in the browser</span></li></ul>
-    <p class="links"><a href="https://github.com/visawestern/anime-canvas-pwa">source ↗</a></p>
-  </div>
-  <figure><img src="assets/shots/animecanvas/icon-512.png" alt="AnimeCanvas PWA — evidence" loading="lazy"></figure>
-</article>
-<article class="case" id="diffusionstudio">
-  <div class="case-head">
-    <span class="kicker">CASE 10 · AI / macOS</span>
-    <h3>DiffusionStudio</h3>
-    <p class="sub">Local Stable Diffusion on the Mac — parameters, progress, journal.</p>
-    <ul class="facts"><li><b>0</b><span>servers, 0 API keys — stable-diffusion.cpp runs locally</span></li><li><b>4</b><span>things in one sidebar: params · progress · preview · journal</span></li><li><b>1</b><span>macOS-native client, not a web wrapper</span></li></ul>
-    <p class="links"><a href="https://github.com/visawestern/DiffusionStudio">source ↗</a></p>
-  </div>
-  <figure><img src="assets/shots/diffusionstudio/screenshot-sidebar.png" alt="DiffusionStudio — evidence" loading="lazy"></figure>
-</article>
-<article class="case" id="vdstudio">
-  <div class="case-head">
-    <span class="kicker">CASE 09 · MEDIA / macOS</span>
-    <h3>Dub Studio</h3>
-    <p class="sub">Local-first video dubbing on macOS: probe → SRT → dub → MKV.</p>
-    <ul class="facts"><li><b>17</b><span>Dart tests over the pipeline stages</span></li><li><b>0</b><span>cloud calls — models local, files stay on the Mac</span></li><li><b>4</b><span>stages: probe → waveform → SRT → export</span></li></ul>
-    <p class="links"><span class="muted">repo private — code on request</span></p>
-  </div>
-  
-</article>
-<article class="case" id="fixprice">
-  <div class="case-head">
-    <span class="kicker">CASE 16 · CRYPTO / MARKETPLACE</span>
-    <h3>Krate</h3>
-    <p class="sub">Card-checking marketplace with an on-chain product registry.</p>
-    <ul class="facts"><li><b>1</b><span>registry: on-chain linked list — no DB of record</span></li><li><b>4</b><span>chains: BTC · LTC · USDT · BNB flows</span></li><li><b>0</b><span>tests yet — a known gap, stated honestly</span></li></ul>
-    <p class="links"><span class="muted">repo private — code on request</span></p>
-  </div>
-  
-</article>
-<article class="case" id="rid">
-  <div class="case-head">
-    <span class="kicker">CASE 17 · SOCIAL PLATFORM</span>
-    <h3>RID</h3>
-    <p class="sub">Social network monorepo: Laravel API · Vue SPAs · Flutter messenger.</p>
-    <ul class="facts"><li><b>400</b><span>commits across the monorepo</span></li><li><b>4</b><span>frontends incl. a Flutter messenger</span></li><li><b>4×</b><span>test suites per subproject + mobile CI</span></li></ul>
-    <p class="links"><span class="muted">repo private — code on request</span></p>
-  </div>
-  <figure><img src="assets/shots/rid/rid_security_forensics_report.png" alt="RID — evidence" loading="lazy"></figure>
-</article>
-<article class="case" id="voice">
-  <div class="case-head">
-    <span class="kicker">CASE 18 · VOICE / INPUT</span>
-    <h3>Say it. Type it. Ship it.</h3>
-    <p class="sub">Dictation, live translation, and a keyboard that learns — local-first.</p>
-    <ul class="facts"><li><b>228</b><span>test files across the three stacks (177 Dart + 51 Swift)</span></li><li><b>0</b><span>cloud calls — local models only</span></li><li><b>3</b><span>platforms: macOS menu bar · iOS · Android</span></li></ul>
-    <p class="links"><span class="muted">repo private — code on request</span></p>
-  </div>
-  
+<article class="featured" id="ssh2vpn">
+  <span class="num">04</span>
+  <h3>SSH2VPN</h3>
+  <dl class="flow">
+    <dt>Problem</dt><dd>A personal VPN usually means installing a daemon and trusting a provider. An SSH server you already own should be enough.</dd>
+    <dt>Approach</dt><dd>NEPacketTunnel data plane relaying over SSH direct-tcpip — stock sshd + AllowTcpForwarding is the only server requirement. iOS + Android + macOS on one core.</dd>
+    <dt>Result</dt><dd>On the App Store; the release gate proves the debug channel is in no shipped binary.</dd>
+  </dl>
+  <ul class="facts"><li><b>589</b><span>test methods in 66 Swift files + 28 Python gateway tests</span></li><li><b>3</b><span>platforms: iOS · Android · macOS on one shared core</span></li><li><b>17</b><span>locales · StoreKit paywall · live on the App Store</span></li></ul>
+  <p class="links"><a href="https://github.com/visawestern/ssh2vpn">source ↗</a></p>
+  <figure class="zoomable"><img src="assets/shots/ssh2vpn/01-connect.png" alt="SSH2VPN — evidence" loading="lazy"></figure>
 </article>
     </div>
   </section>
+  <section id="catalog">
+    <h2>More work</h2>
+    <p class="catalog-note">Full catalog across systems, products, apps and games.
+      Every case has verified numbers and, where possible, live evidence.</p>
+    <div class="filters">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="systems">Systems &amp; AI engines</button><button data-filter="products">Products &amp; marketplaces</button><button data-filter="apps">Apps &amp; media</button><button data-filter="games">Games &amp; creative</button>
+    </div>
+    <ul class="compact-grid">
+<li class="compact" data-cat="systems">
+  <div class="compact-head">
+    <span class="num">05</span>
+    <div><h4>kuzTDS</h4><span class="cat">Systems &amp; AI engines</span></div>
+  </div>
+  <p class="compact-sub">High-throughput click &amp; redirect tracking in Go. One binary, ClickHouse + Redis.</p>
+  <p class="compact-fact"><b>26</b> <span>commits ahead of upstream — the money domain it never had</span></p>
+  <p class="links"><a href="https://github.com/visawestern/kuztds">source ↗</a></p>
+</li>
+<li class="compact" data-cat="systems">
+  <div class="compact-head">
+    <span class="num">06</span>
+    <div><h4>The layer under the AI</h4><span class="cat">Systems &amp; AI engines</span></div>
+  </div>
+  <p class="compact-sub">Inference engines, weight containers, MoE runs — built from the metal up.</p>
+  <p class="compact-fact"><b>1,536</b> <span>logical MoE experts from a dense 27B FFN (Rust + Metal)</span></p>
+  <p class="links"></p>
+</li>
+<li class="compact" data-cat="systems">
+  <div class="compact-head">
+    <span class="num">07</span>
+    <div><h4>RaZuM</h4><span class="cat">Systems &amp; AI engines</span></div>
+  </div>
+  <p class="compact-sub">A semantic &quot;brain&quot; in Go — not an LLM, a graph-matrix engine.</p>
+  <p class="compact-fact"><b>686</b> <span>Go test files across 731 commits</span></p>
+  <p class="links"></p>
+</li>
+<li class="compact" data-cat="products">
+  <div class="compact-head">
+    <span class="num">08</span>
+    <div><h4>Booking, built for a real business</h4><span class="cat">Products &amp; marketplaces</span></div>
+  </div>
+  <p class="compact-sub">Lash &amp; nail studio in Pattaya — Next.js 16 + Supabase, th/ru/en.</p>
+  <p class="compact-fact"><b>3</b> <span>languages: th · ru · en with next-intl</span></p>
+  <p class="links"><a href="https://charming-lashes-booking.vercel.app">live ↗</a></p>
+</li>
+<li class="compact" data-cat="products">
+  <div class="compact-head">
+    <span class="num">09</span>
+    <div><h4>Titto-platform</h4><span class="cat">Products &amp; marketplaces</span></div>
+  </div>
+  <p class="compact-sub">The successor of two codebases — with a real deploy pipeline.</p>
+  <p class="compact-fact"><b>5</b> <span>CI gates: install · build · test · audit · deploy</span></p>
+  <p class="links"></p>
+</li>
+<li class="compact" data-cat="products">
+  <div class="compact-head">
+    <span class="num">10</span>
+    <div><h4>minray.store</h4><span class="cat">Products &amp; marketplaces</span></div>
+  </div>
+  <p class="compact-sub">Live store + a module-by-module migration to Laravel, with parity tests.</p>
+  <p class="compact-fact"><b>40+</b> <span>PHPUnit tests guarding port parity</span></p>
+  <p class="links"><a href="https://minray.store">live ↗</a></p>
+</li>
+<li class="compact" data-cat="products">
+  <div class="compact-head">
+    <span class="num">11</span>
+    <div><h4>dibaas.cloud</h4><span class="cat">Products &amp; marketplaces</span></div>
+  </div>
+  <p class="compact-sub">Blockchain-as-a-service SaaS: IPFS pinning, EVM RPC, crypto billing.</p>
+  <p class="compact-fact"><b>18</b> <span>API controllers · 13,525 lines · 51 migrations</span></p>
+  <p class="links"><a href="https://dibaas.cloud">live ↗</a></p>
+</li>
+<li class="compact" data-cat="systems">
+  <div class="compact-head">
+    <span class="num">12</span>
+    <div><h4>Proof, not vibes</h4><span class="cat">Systems &amp; AI engines</span></div>
+  </div>
+  <p class="compact-sub">Defensive verification PoCs: every finding runnable, timestamped, reproducible.</p>
+  <p class="compact-fact"><b>4</b> <span>PoCs: smuggling · RCE chain · privilege boundary · XSS</span></p>
+  <p class="links"></p>
+</li>
+<li class="compact" data-cat="games">
+  <div class="compact-head">
+    <span class="num">13</span>
+    <div><h4>Bezdna</h4><span class="cat">Games &amp; creative</span></div>
+  </div>
+  <p class="compact-sub">Open-world action MMORPG: Unity 6000 URP client + Laravel API.</p>
+  <p class="compact-fact"><b>3</b> <span>stacks: Unity C# · Laravel API · Python bridge</span></p>
+  <p class="links"></p>
+</li>
+<li class="compact" data-cat="games">
+  <div class="compact-head">
+    <span class="num">14</span>
+    <div><h4>Horizon Drift</h4><span class="cat">Games &amp; creative</span></div>
+  </div>
+  <p class="compact-sub">Procedural survival across a 720-star galaxy — Godot 4.7 + Jolt.</p>
+  <p class="compact-fact"><b>218</b> <span>headless GDScript test files</span></p>
+  <p class="links"></p>
+</li>
+<li class="compact" data-cat="apps">
+  <div class="compact-head">
+    <span class="num">15</span>
+    <div><h4>AnimeCanvas PWA</h4><span class="cat">Apps &amp; media</span></div>
+  </div>
+  <p class="compact-sub">Photo → cel animation, generated client-side in the browser.</p>
+  <p class="compact-fact"><b>51</b> <span>test files with a TDD evidence report in the repo</span></p>
+  <p class="links"><a href="https://github.com/visawestern/anime-canvas-pwa">source ↗</a></p>
+</li>
+<li class="compact" data-cat="apps">
+  <div class="compact-head">
+    <span class="num">16</span>
+    <div><h4>DiffusionStudio</h4><span class="cat">Apps &amp; media</span></div>
+  </div>
+  <p class="compact-sub">Local Stable Diffusion on the Mac — parameters, progress, journal.</p>
+  <p class="compact-fact"><b>0</b> <span>servers, 0 API keys — stable-diffusion.cpp runs locally</span></p>
+  <p class="links"><a href="https://github.com/visawestern/DiffusionStudio">source ↗</a></p>
+</li>
+<li class="compact" data-cat="apps">
+  <div class="compact-head">
+    <span class="num">17</span>
+    <div><h4>Dub Studio</h4><span class="cat">Apps &amp; media</span></div>
+  </div>
+  <p class="compact-sub">Local-first video dubbing on macOS: probe → SRT → dub → MKV.</p>
+  <p class="compact-fact"><b>17</b> <span>Dart tests over the pipeline stages</span></p>
+  <p class="links"></p>
+</li>
+<li class="compact" data-cat="products">
+  <div class="compact-head">
+    <span class="num">18</span>
+    <div><h4>Krate</h4><span class="cat">Products &amp; marketplaces</span></div>
+  </div>
+  <p class="compact-sub">Card-checking marketplace with an on-chain product registry.</p>
+  <p class="compact-fact"><b>1</b> <span>registry: on-chain linked list — no DB of record</span></p>
+  <p class="links"></p>
+</li>
+<li class="compact" data-cat="apps">
+  <div class="compact-head">
+    <span class="num">19</span>
+    <div><h4>RID</h4><span class="cat">Apps &amp; media</span></div>
+  </div>
+  <p class="compact-sub">Social network monorepo: Laravel API · Vue SPAs · Flutter messenger.</p>
+  <p class="compact-fact"><b>400</b> <span>commits across the monorepo</span></p>
+  <p class="links"></p>
+</li>
+<li class="compact" data-cat="apps">
+  <div class="compact-head">
+    <span class="num">20</span>
+    <div><h4>Say it. Type it. Ship it.</h4><span class="cat">Apps &amp; media</span></div>
+  </div>
+  <p class="compact-sub">Dictation, live translation, and a keyboard that learns — local-first.</p>
+  <p class="compact-fact"><b>228</b> <span>test files across the three stacks (177 Dart + 51 Swift)</span></p>
+  <p class="links"></p>
+</li>
+    </ul>
+  </section>
   <section id="about">
-    <h2>About</h2>
-    <p>I build end-to-end: browsers patched in C++, Swift macOS apps, Laravel/Vue
-    marketplaces, Go backends on ClickHouse, VPNs shipped to the App Store, and
-    LLM inference engines on Metal. I test what I ship, document what I verify,
-    and keep honest notes about what isn't finished.</p>
-    <p class="links"><a href="https://github.com/visawestern">source of truth: GitHub ↗</a></p>
+    <h2>About & contact</h2>
+    <p>I work as an independent engineer: I take a product, own it end to end —
+    systems, app, deploy, tests — and hand it over running. Typical engagements:
+    native/macOS tooling, AI systems, marketplaces and platforms, and high-load
+    backends. Working hours: UTC+7, async-friendly; happy to overlap EU/US mornings.</p>
+    <p>Best way to reach me: <a href="mailto:visawestern.com@gmail.com">visawestern.com@gmail.com</a>
+    or <a href="https://github.com/visawestern">GitHub ↗</a>. Code for most cases
+    is on GitHub; private repositories are available on request.</p>
   </section>
 </main>
-<footer class="wrap"><p>© Greener — portfolio. Every number is verifiable in the repos.</p></footer>
+<footer class="wrap"><p>© Greener — portfolio. Every number is verifiable.</p></footer>
+<div class="lightbox" id="lightbox" aria-hidden="true"><img alt=""></div>
+<script src="app.js"></script>
 </body>
 </html>
