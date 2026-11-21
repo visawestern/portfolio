@@ -59,9 +59,19 @@
   </div>
   <figure class="zoomable"><img src="assets/shots/live/titto-hero.png" alt="Titto.shop — evidence" loading="lazy"></figure>
 </article>
+<article class="case" id="llmeng">
+  <div class="case-head">
+    <span class="kicker">CASE 04 · LLM SYSTEMS</span>
+    <h3>The layer under the AI</h3>
+    <p class="sub">Inference engines, weight containers, MoE runs — built from the metal up.</p>
+    <ul class="facts"><li><b>1,536</b><span>logical MoE experts from a dense 27B FFN (Rust + Metal)</span></li><li><b>0</b><span>loss — m2c container verifies greedy-token identity</span></li><li><b>4</b><span>engines: denseToMOE · m2c · model_repack · freeToken</span></li></ul>
+    <p class="links"></p>
+  </div>
+  <figure class="zoomable"><img src="assets/shots/m2c/m2c_status_report.png" alt="The layer under the AI — evidence" loading="lazy"></figure>
+</article>
 <article class="case" id="ssh2vpn">
   <div class="case-head">
-    <span class="kicker">CASE 04 · INFRA / MOBILE</span>
+    <span class="kicker">CASE 05 · INFRA / MOBILE</span>
     <h3>SSH2VPN</h3>
     <p class="sub">Your own SSH server, as a system-wide VPN. No server changes at all.</p>
     <ul class="facts"><li><b>589</b><span>test methods in 66 Swift files + 28 Python gateway tests</span></li><li><b>3</b><span>platforms: iOS · Android · macOS on one shared core</span></li><li><b>17</b><span>locales · StoreKit paywall · live on the App Store</span></li></ul>
@@ -71,7 +81,7 @@
 </article>
 <article class="case" id="kuztds">
   <div class="case-head">
-    <span class="kicker">CASE 05 · BACKEND</span>
+    <span class="kicker">CASE 06 · BACKEND</span>
     <h3>kuzTDS</h3>
     <p class="sub">High-throughput click &amp; redirect tracking in Go. One binary, ClickHouse + Redis.</p>
     <ul class="facts"><li><b>26</b><span>commits ahead of upstream — the money domain it never had</span></li><li><b>494</b><span>test functions across 97 files · CI runs with -race</span></li><li><b>28.6k</b><span>LOC of Go, single deployable binary</span></li></ul>
@@ -79,33 +89,44 @@
   </div>
   <figure class="zoomable"><img src="assets/shots/kuztds/dashboard.png" alt="kuzTDS — evidence" loading="lazy"></figure>
 </article>
-<article class="case" id="llmeng">
+<article class="case" id="dibaas">
   <div class="case-head">
-    <span class="kicker">CASE 06 · LLM SYSTEMS</span>
-    <h3>The layer under the AI</h3>
-    <p class="sub">Inference engines, weight containers, MoE runs — built from the metal up.</p>
-    <ul class="facts"><li><b>1,536</b><span>logical MoE experts from a dense 27B FFN (Rust + Metal)</span></li><li><b>0</b><span>loss — m2c container verifies greedy-token identity</span></li><li><b>4</b><span>engines: denseToMOE · m2c · model_repack · freeToken</span></li></ul>
-    <p class="links"></p>
+    <span class="kicker">CASE 07 · PLATFORM</span>
+    <h3>dibaas.cloud</h3>
+    <p class="sub">Blockchain-as-a-service SaaS: IPFS pinning, EVM RPC, crypto billing.</p>
+    <ul class="facts"><li><b>18</b><span>API controllers · 13,525 lines · 51 migrations</span></li><li><b>4</b><span>billing · IPFS · RPC gateway · subdomain routing</span></li><li><b>1</b><span>Laravel install serving &lt;project&gt;.dibaas.cloud subdomains</span></li></ul>
+    <p class="links"><a href="https://dibaas.cloud">live ↗</a></p>
   </div>
-  <figure class="zoomable"><img src="assets/shots/m2c/m2c_status_report.png" alt="The layer under the AI — evidence" loading="lazy"></figure>
+  <figure class="zoomable"><img src="assets/shots/dibaas/application.png" alt="dibaas.cloud — evidence" loading="lazy"></figure>
 </article>
-<article class="case" id="razum">
+<article class="case" id="pocsec">
   <div class="case-head">
-    <span class="kicker">CASE 07 · AI ENGINE</span>
-    <h3>RaZuM</h3>
-    <p class="sub">A semantic &quot;brain&quot; in Go — not an LLM, a graph-matrix engine.</p>
-    <ul class="facts"><li><b>686</b><span>Go test files across 731 commits</span></li><li><b>9</b><span>layers in the unified memory representation</span></li><li><b>1</b><span>API surface: OpenAI/Ollama-compatible on :13373</span></li></ul>
+    <span class="kicker">CASE 08 · SECURITY</span>
+    <h3>Proof, not vibes</h3>
+    <p class="sub">Defensive verification PoCs: every finding runnable, timestamped, reproducible.</p>
+    <ul class="facts"><li><b>4</b><span>PoCs: smuggling · RCE chain · privilege boundary · XSS</span></li><li><b>100%</b><span>runnable — pytest suite + HTML evidence per check</span></li><li><b>0</b><span>claims without a reproduction</span></li></ul>
     <p class="links"></p>
   </div>
-  <div class="codefill">model:  graph-matrix + 128-bit keys
-memory: 9-layer UMR
-API:    OpenAI/Ollama-compatible
-        (<span class='g'>:13373</span> — any client can attach)
-tests:  686 Go test files</div>
+  <figure class="zoomable"><img src="assets/shots/pocsec/poc4_wwwdata_root_boundary.png" alt="Proof, not vibes — evidence" loading="lazy"></figure>
+</article>
+<article class="case" id="voice">
+  <div class="case-head">
+    <span class="kicker">CASE 09 · VOICE / INPUT</span>
+    <h3>Say it. Type it. Ship it.</h3>
+    <p class="sub">Dictation, live translation, and a keyboard that learns — local-first.</p>
+    <ul class="facts"><li><b>228</b><span>test files across the three stacks (177 Dart + 51 Swift)</span></li><li><b>0</b><span>cloud calls — local models only</span></li><li><b>3</b><span>platforms: macOS menu bar · iOS · Android</span></li></ul>
+    <p class="links"></p>
+  </div>
+  <div class="codefill">fastTranscibe: tray app → focused field
+             (push-to-talk + Accessibility)
+SpeakEasy:     Flutter live 2-party translation
+             (198 lib / 177 test files)
+DevInput:      global interceptor + llama.cpp
+               learned corrections</div>
 </article>
 <article class="case" id="nailshop">
   <div class="case-head">
-    <span class="kicker">CASE 08 · PRODUCT</span>
+    <span class="kicker">CASE 10 · PRODUCT</span>
     <h3>Booking, built for a real business</h3>
     <p class="sub">Lash &amp; nail studio in Pattaya — Next.js 16 + Supabase, th/ru/en.</p>
     <ul class="facts"><li><b>3</b><span>languages: th · ru · en with next-intl</span></li><li><b>7</b><span>Vercel cron jobs running the business day</span></li><li><b>2</b><span>apps in one: client booking + admin console</span></li></ul>
@@ -113,9 +134,29 @@ tests:  686 Go test files</div>
   </div>
   <figure class="zoomable"><img src="assets/shots/nailshop/04-booking-status-confirmed.png" alt="Booking, built for a real business — evidence" loading="lazy"></figure>
 </article>
+<article class="case" id="animecanvas">
+  <div class="case-head">
+    <span class="kicker">CASE 11 · AI / FRONTEND</span>
+    <h3>AnimeCanvas PWA</h3>
+    <p class="sub">Photo → cel animation, generated client-side in the browser.</p>
+    <ul class="facts"><li><b>51</b><span>test files with a TDD evidence report in the repo</span></li><li><b>~90%</b><span>reported line coverage + live smoke test</span></li><li><b>0</b><span>servers — entire pipeline runs in the browser</span></li></ul>
+    <p class="links"><a href="https://github.com/visawestern/anime-canvas-pwa">source ↗</a></p>
+  </div>
+  <figure class="zoomable"><img src="assets/shots/animecanvas/icon-512.png" alt="AnimeCanvas PWA — evidence" loading="lazy"></figure>
+</article>
+<article class="case" id="diffusionstudio">
+  <div class="case-head">
+    <span class="kicker">CASE 12 · AI / macOS</span>
+    <h3>DiffusionStudio</h3>
+    <p class="sub">Local Stable Diffusion on the Mac — parameters, progress, journal.</p>
+    <ul class="facts"><li><b>0</b><span>servers, 0 API keys — stable-diffusion.cpp runs locally</span></li><li><b>4</b><span>things in one sidebar: params · progress · preview · journal</span></li><li><b>1</b><span>macOS-native client, not a web wrapper</span></li></ul>
+    <p class="links"><a href="https://github.com/visawestern/DiffusionStudio">source ↗</a></p>
+  </div>
+  <figure class="zoomable"><img src="assets/shots/diffusionstudio/screenshot-sidebar.png" alt="DiffusionStudio — evidence" loading="lazy"></figure>
+</article>
 <article class="case" id="tittoplatform">
   <div class="case-head">
-    <span class="kicker">CASE 09 · PLATFORM</span>
+    <span class="kicker">CASE 13 · PLATFORM</span>
     <h3>Titto-platform</h3>
     <p class="sub">The successor of two codebases — with a real deploy pipeline.</p>
     <ul class="facts"><li><b>5</b><span>CI gates: install · build · test · audit · deploy</span></li><li><b>8.4</b><span>PHP strict types with phpstan in the loop</span></li><li><b>DDD</b><span>modular monolith, unified error contract</span></li></ul>
@@ -131,39 +172,9 @@ tests:  686 Go test files</div>
 stack: Laravel 12 · Vue 3.5 · PostGIS
 Redis · Horizon · Meilisearch · Reverb</div>
 </article>
-<article class="case" id="minray">
-  <div class="case-head">
-    <span class="kicker">CASE 10 · E-COMMERCE</span>
-    <h3>minray.store</h3>
-    <p class="sub">Live store + a module-by-module migration to Laravel, with parity tests.</p>
-    <ul class="facts"><li><b>40+</b><span>PHPUnit tests guarding port parity</span></li><li><b>3</b><span>viewports verified: 1440 · 768 · 375</span></li><li><b>13</b><span>target: Laravel 13 + PostgreSQL 18 stack</span></li></ul>
-    <p class="links"><a href="https://minray.store">live ↗</a></p>
-  </div>
-  <figure class="zoomable"><img src="assets/shots/live/minray-home.png" alt="minray.store — evidence" loading="lazy"></figure>
-</article>
-<article class="case" id="dibaas">
-  <div class="case-head">
-    <span class="kicker">CASE 11 · PLATFORM</span>
-    <h3>dibaas.cloud</h3>
-    <p class="sub">Blockchain-as-a-service SaaS: IPFS pinning, EVM RPC, crypto billing.</p>
-    <ul class="facts"><li><b>18</b><span>API controllers · 13,525 lines · 51 migrations</span></li><li><b>4</b><span>billing · IPFS · RPC gateway · subdomain routing</span></li><li><b>1</b><span>Laravel install serving &lt;project&gt;.dibaas.cloud subdomains</span></li></ul>
-    <p class="links"><a href="https://dibaas.cloud">live ↗</a></p>
-  </div>
-  <figure class="zoomable"><img src="assets/shots/dibaas/application.png" alt="dibaas.cloud — evidence" loading="lazy"></figure>
-</article>
-<article class="case" id="pocsec">
-  <div class="case-head">
-    <span class="kicker">CASE 12 · SECURITY</span>
-    <h3>Proof, not vibes</h3>
-    <p class="sub">Defensive verification PoCs: every finding runnable, timestamped, reproducible.</p>
-    <ul class="facts"><li><b>4</b><span>PoCs: smuggling · RCE chain · privilege boundary · XSS</span></li><li><b>100%</b><span>runnable — pytest suite + HTML evidence per check</span></li><li><b>0</b><span>claims without a reproduction</span></li></ul>
-    <p class="links"></p>
-  </div>
-  <figure class="zoomable"><img src="assets/shots/pocsec/poc4_wwwdata_root_boundary.png" alt="Proof, not vibes — evidence" loading="lazy"></figure>
-</article>
 <article class="case" id="bezdna">
   <div class="case-head">
-    <span class="kicker">CASE 13 · GAMES</span>
+    <span class="kicker">CASE 14 · GAMES</span>
     <h3>Bezdna</h3>
     <p class="sub">Open-world action MMORPG: Unity 6000 URP client + Laravel API.</p>
     <ul class="facts"><li><b>3</b><span>stacks: Unity C# · Laravel API · Python bridge</span></li><li><b>20</b><span>task decks (R00–R20) planned in-repo</span></li><li><b>3×</b><span>test suites: Unity EditMode/PlayMode · Laravel · pytest</span></li></ul>
@@ -173,7 +184,7 @@ Redis · Horizon · Meilisearch · Reverb</div>
 </article>
 <article class="case" id="horizondrift">
   <div class="case-head">
-    <span class="kicker">CASE 14 · GAMES</span>
+    <span class="kicker">CASE 15 · GAMES</span>
     <h3>Horizon Drift</h3>
     <p class="sub">Procedural survival across a 720-star galaxy — Godot 4.7 + Jolt.</p>
     <ul class="facts"><li><b>218</b><span>headless GDScript test files</span></li><li><b>4</b><span>phase changes: space → atmosphere → land → take off</span></li><li><b>0</b><span>overclaims — README admits what&#x27;s unverified</span></li></ul>
@@ -181,29 +192,29 @@ Redis · Horizon · Meilisearch · Reverb</div>
   </div>
   <figure class="zoomable"><img src="assets/shots/horizondrift/hd_space_sheet.png" alt="Horizon Drift — evidence" loading="lazy"></figure>
 </article>
-<article class="case" id="animecanvas">
+<article class="case" id="minray">
   <div class="case-head">
-    <span class="kicker">CASE 15 · AI / FRONTEND</span>
-    <h3>AnimeCanvas PWA</h3>
-    <p class="sub">Photo → cel animation, generated client-side in the browser.</p>
-    <ul class="facts"><li><b>51</b><span>test files with a TDD evidence report in the repo</span></li><li><b>~90%</b><span>reported line coverage + live smoke test</span></li><li><b>0</b><span>servers — entire pipeline runs in the browser</span></li></ul>
-    <p class="links"><a href="https://github.com/visawestern/anime-canvas-pwa">source ↗</a></p>
+    <span class="kicker">CASE 16 · E-COMMERCE</span>
+    <h3>minray.store</h3>
+    <p class="sub">Live store + a module-by-module migration to Laravel, with parity tests.</p>
+    <ul class="facts"><li><b>40+</b><span>PHPUnit tests guarding port parity</span></li><li><b>3</b><span>viewports verified: 1440 · 768 · 375</span></li><li><b>13</b><span>target: Laravel 13 + PostgreSQL 18 stack</span></li></ul>
+    <p class="links"><a href="https://minray.store">live ↗</a></p>
   </div>
-  <figure class="zoomable"><img src="assets/shots/animecanvas/icon-512.png" alt="AnimeCanvas PWA — evidence" loading="lazy"></figure>
+  <figure class="zoomable"><img src="assets/shots/live/minray-home.png" alt="minray.store — evidence" loading="lazy"></figure>
 </article>
-<article class="case" id="diffusionstudio">
+<article class="case" id="rid">
   <div class="case-head">
-    <span class="kicker">CASE 16 · AI / macOS</span>
-    <h3>DiffusionStudio</h3>
-    <p class="sub">Local Stable Diffusion on the Mac — parameters, progress, journal.</p>
-    <ul class="facts"><li><b>0</b><span>servers, 0 API keys — stable-diffusion.cpp runs locally</span></li><li><b>4</b><span>things in one sidebar: params · progress · preview · journal</span></li><li><b>1</b><span>macOS-native client, not a web wrapper</span></li></ul>
-    <p class="links"><a href="https://github.com/visawestern/DiffusionStudio">source ↗</a></p>
+    <span class="kicker">CASE 17 · SOCIAL PLATFORM</span>
+    <h3>RID</h3>
+    <p class="sub">Social network monorepo: Laravel API · Vue SPAs · Flutter messenger.</p>
+    <ul class="facts"><li><b>400</b><span>commits across the monorepo</span></li><li><b>4</b><span>frontends incl. a Flutter messenger</span></li><li><b>4×</b><span>test suites per subproject + mobile CI</span></li></ul>
+    <p class="links"></p>
   </div>
-  <figure class="zoomable"><img src="assets/shots/diffusionstudio/screenshot-sidebar.png" alt="DiffusionStudio — evidence" loading="lazy"></figure>
+  <figure class="zoomable"><img src="assets/shots/rid/rid-frontend-register.png" alt="RID — evidence" loading="lazy"></figure>
 </article>
 <article class="case" id="vdstudio">
   <div class="case-head">
-    <span class="kicker">CASE 17 · MEDIA / macOS</span>
+    <span class="kicker">CASE 18 · MEDIA / macOS</span>
     <h3>Dub Studio</h3>
     <p class="sub">Local-first video dubbing on macOS: probe → SRT → dub → MKV.</p>
     <ul class="facts"><li><b>17</b><span>Dart tests over the pipeline stages</span></li><li><b>0</b><span>cloud calls — models local, files stay on the Mac</span></li><li><b>4</b><span>stages: probe → waveform → SRT → export</span></li></ul>
@@ -215,30 +226,19 @@ roles:   per-speaker voice profiles
 export:  MKV/MP4 (FFmpeg bundled)
 tts:     local models, no cloud</div>
 </article>
-<article class="case" id="rid">
+<article class="case" id="razum">
   <div class="case-head">
-    <span class="kicker">CASE 18 · SOCIAL PLATFORM</span>
-    <h3>RID</h3>
-    <p class="sub">Social network monorepo: Laravel API · Vue SPAs · Flutter messenger.</p>
-    <ul class="facts"><li><b>400</b><span>commits across the monorepo</span></li><li><b>4</b><span>frontends incl. a Flutter messenger</span></li><li><b>4×</b><span>test suites per subproject + mobile CI</span></li></ul>
+    <span class="kicker">CASE 19 · AI ENGINE</span>
+    <h3>RaZuM</h3>
+    <p class="sub">A semantic &quot;brain&quot; in Go — not an LLM, a graph-matrix engine.</p>
+    <ul class="facts"><li><b>686</b><span>Go test files across 731 commits</span></li><li><b>9</b><span>layers in the unified memory representation</span></li><li><b>1</b><span>API surface: OpenAI/Ollama-compatible on :13373</span></li></ul>
     <p class="links"></p>
   </div>
-  <figure class="zoomable"><img src="assets/shots/rid/rid-frontend-register.png" alt="RID — evidence" loading="lazy"></figure>
-</article>
-<article class="case" id="voice">
-  <div class="case-head">
-    <span class="kicker">CASE 19 · VOICE / INPUT</span>
-    <h3>Say it. Type it. Ship it.</h3>
-    <p class="sub">Dictation, live translation, and a keyboard that learns — local-first.</p>
-    <ul class="facts"><li><b>228</b><span>test files across the three stacks (177 Dart + 51 Swift)</span></li><li><b>0</b><span>cloud calls — local models only</span></li><li><b>3</b><span>platforms: macOS menu bar · iOS · Android</span></li></ul>
-    <p class="links"></p>
-  </div>
-  <div class="codefill">fastTranscibe: tray app → focused field
-             (push-to-talk + Accessibility)
-SpeakEasy:     Flutter live 2-party translation
-             (198 lib / 177 test files)
-DevInput:      global interceptor + llama.cpp
-               learned corrections</div>
+  <div class="codefill">model:  graph-matrix + 128-bit keys
+memory: 9-layer UMR
+API:    OpenAI/Ollama-compatible
+        (<span class='g'>:13373</span> — any client can attach)
+tests:  686 Go test files</div>
 </article>
     </div>
   </section>
